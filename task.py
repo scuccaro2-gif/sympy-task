@@ -40,6 +40,11 @@ def calcola_polinomio_taylor(espressione: str, variabile: str, punto: float, ord
 
 def risolvi_sistema_lineare(eq1: str, eq2: str, var1: str, var2: str) -> Dict[sympy.Symbol, sympy.Expr]:
     """Sub-task 5: Risolvere un Sistema Lineare."""
+    import numpy as np
+    x, y = symbols('x, y')
+
+    A = Matrix([eq1], [eq2]])
+    solve_linear_system(A, x, y)
     pass
 
 def main():
