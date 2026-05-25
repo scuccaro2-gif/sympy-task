@@ -20,12 +20,17 @@ def calcola_integrale_definito(espressione: str, variabile: str, estremo_inf: fl
     x = sp.Symbol('x')
     espressione= str
     print("inserisci un'espressione")
-    integrale =sympy.Integrale(espressione, x)
+    integrale =simpy.Integrale(espressione, x)
 
     pass
 
 def calcola_limite(espressione: str, variabile: str, punto: str) -> sympy.Expr:
     """Sub-task 3: Calcolare un Limite."""
+    import sympy as sp
+    x = sp.symbols('x')
+    f=espressione
+    limit_value = sp.limit(f, x)
+    print(limit_value)
     pass
 
 def calcola_polinomio_taylor(espressione: str, variabile: str, punto: float, ordine: int) -> sympy.Expr:
